@@ -11,7 +11,10 @@ import java.time.LocalDateTime;
 public class ConsultaPicoPlacaRequest {
 
     @NotBlank(message = "El número de placa es obligatorio")
-    @Pattern(regexp = "^[A-Z]{3}-?\\d{3,4}$", message = "Formato de placa inválido. Use el formato ABC-1234")
+    @Pattern(
+            regexp = "^([A-Z]{3}-?\\d{3,4})|([A-Z]{2}\\d{3}[A-Z])$",
+            message = "Formato de placa inválido. Use AAA-1234 o AA123A"
+    )
     private String placa;
 
     @NotNull(message = "Debe especificar el tipo de vehículo")
