@@ -20,6 +20,9 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Dar permisos a mvnw
+        run: chmod +x mvnw
+
       - name: Run tests
         run: ./mvnw clean test
 
