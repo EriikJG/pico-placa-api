@@ -16,7 +16,7 @@ public class WebConfig {
                 registry.addMapping("/**")
                         .allowedOriginPatterns(
                                 "http://localhost:4200",
-                                "https://pico-placa-api-j39x.onrender.com"
+                                "https://pico-placa-web.vercel.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
